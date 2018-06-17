@@ -1,0 +1,11 @@
+<div class="flex-container">
+  <div #black class="color selected-color" style="background-color: black" 
+  (click)="onClick($event)" title="Black"></div>
+  <div
+    class="color"
+    *ngFor="let color of Colors"
+    (click)="onClick($event)"
+    [style.backgroundColor]="color"
+    [title]="color">
+  </div>
+</div>

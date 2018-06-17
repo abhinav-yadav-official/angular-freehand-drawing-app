@@ -1,0 +1,12 @@
+<div class="title">Drawing App</div>
+<div class="flex-column-button">
+<button mat-raised-button (click)="onNewClick()">New</button>
+<a #save href="#" (click)="onSaveClick()" download="image.png">
+<button mat-raised-button>Save</button>
+</a>
+</div>
+<div class="heading">Stroke size</div>
+<mat-radio-group class="flex-column-radio">
+  <mat-radio-button *ngFor="let i of [1,2,4,8,16]" [value]="i" [checked]="i==1?true:undefined" (click)="onRadioSelect(i)">
+  {{i}}px</mat-radio-button>
+</mat-radio-group>
